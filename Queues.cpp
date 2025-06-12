@@ -48,5 +48,8 @@ public:
             cout << "queues underflow\n";
             return;
         }
+        cout << "\nthe element terhapus " << queues_array[front] << "\n";
+
         
+    }
 };
