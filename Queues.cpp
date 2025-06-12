@@ -50,23 +50,49 @@ public:
         }
         cout << "\nthe element terhapus " << queues_array[front] << "\n";
 
-        if (front == rear) {
+        if (front == rear)
+        {
             front = -1;
             rear = -1;
-
         }
-        else{
+        else
+        {
             if (front == max - 1)
-            front =0;
+                front = 0;
             else
-            front = front + 1;
+                front = front + 1;
         }
     }
 
-    void display(){
+    void display()
+    {
         int front_position = front;
         int rear_position = rear;
 
-        
+        if (front_position <= rear_position)
+        {
+            while (front_position <= rear_position)
+            {
+                cout << queues_array[front_position] << " ";
+                front_position++;
+            }
+        }
+        else
+        {
+            while (front_position <= max - 1)
+            {
+                cout << queues_array[front_position] << " ";
+                front_position++;
+            }
+
+            front_position = 0;
+
+            while (front_position <= rear_position){
+                cout << queues_array[front_position] << " ";
+                front_position++;
+            }
+            cout << endl;
+        }
     }
 };
+
