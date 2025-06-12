@@ -31,7 +31,14 @@ public:
             front = 0;
             rear = 0;
         }
-        
+        else
+        {
+            if (rear == max - 1)
+                rear = 0;
+            else
+                rear = rear + 1;
+        }
+        queues_array[rear] = num;
     }
 
     
